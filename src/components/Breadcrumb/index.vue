@@ -1,3 +1,11 @@
+<!--
+ * @Author: userG 1023536640@qq.com
+ * @Date: 2023-09-25 19:46:41
+ * @LastEditors: userG 1023536640@qq.com
+ * @LastEditTime: 2023-09-26 11:38:51
+ * @FilePath: \x-admin-web\src\components\Breadcrumb\index.vue
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
 <template>
   <el-breadcrumb class="app-breadcrumb" separator="/">
     <transition-group name="breadcrumb">
@@ -33,7 +41,7 @@ export default {
       const first = matched[0]
 
       if (!this.isDashboard(first)) {
-        matched = [{ path: '/dashboard', meta: { title: 'Dashboard' }}].concat(matched)
+        matched = [{ path: '/dashboard', meta: { title: '首页' }}].concat(matched)
       }
 
       this.levelList = matched.filter(item => item.meta && item.meta.title && item.meta.breadcrumb !== false)
